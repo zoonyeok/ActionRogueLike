@@ -3,8 +3,11 @@
 
 #include "RCharacter.h"
 #include "Camera/CameraComponent.h"
-#include "Components/CapsuleComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "DrawDebugHelpers.h"
+#include "RMagicProjectile.h"
+#include "RInteractionComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 ARCharacter::ARCharacter()
@@ -12,21 +15,27 @@ ARCharacter::ARCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	
-	GetMesh()->SetRelativeLocationAndRotation(FVector(0.f,0.f,-90.f), FRotator(0.f,-90.f,0.f));
+	//GetMesh()->SetRelativeLocationAndRotation(FVector(0.f,0.f,-90.f), FRotator(0.f,-90.f,0.f));
 
-	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>("SpringArmComp");
+	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
+	SpringArmComp->bUsePawnControlRotation = true;
 	SpringArmComp->SetupAttachment(RootComponent);
+	
 	SpringArmComp->TargetArmLength = 300.f;
-	SpringArmComp->SetRelativeRotation(FRotator(-15.f,0.f,0.f));
+	//SpringArmComp->SetRelativeRotation(FRotator(-15.f,0.f,0.f));
 
-	CameraComp = CreateDefaultSubobject<UCameraComponent>("CameraComp");
+	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComp"));
 	CameraComp->SetupAttachment(SpringArmComp);
 
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_Character(TEXT("Content/ParagonGideon/Characters/Heroes/Gideon/Meshes/Gideon.uasset"));
-	if (SK_Character.Succeeded())
-	{
-		GetMesh()->SetSkeletalMesh(SK_Character.Object);
-	}
+	InteractionComp = CreateDefaultSubobject<URInteractionComponent>(TEXT("InteractionComp"));
+
+	bUseControllerRotationYaw = false;
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	// static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_Character(TEXT("SkeletalMesh'/Game/ParagonGideon/Characters/Heroes/Gideon/Meshes/Gideon.Gideon'"));
+	// if (SK_Character.Succeeded())
+	// {
+	// 	GetMesh()->SetSkeletalMesh(SK_Character.Object);
+	// }
 }
 
 // Called when the game starts or when spawned
@@ -36,16 +45,27 @@ void ARCharacter::BeginPlay()
 	
 }
 
-void ARCharacter::MoveForward(float Value)
-{
-	AddMovementInput(GetActorForwardVector(),Value);
-}
-
 // Called every frame
+
 void ARCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	// -- Rotation Visualization -- //
+	const float DrawScale = 100.0f;
+	const float Thickness = 5.0f;
 
+	FVector LineStart = GetActorLocation();
+	// Offset to the right of pawn
+	LineStart += GetActorRightVector() * 100.0f;
+	// Set line end in direction of the actor's forward
+	FVector ActorDirection_LineEnd = LineStart + (GetActorForwardVector() * 100.0f);
+	// Draw Actor's Direction
+	DrawDebugDirectionalArrow(GetWorld(), LineStart, ActorDirection_LineEnd, DrawScale, FColor::Yellow, false, 0.0f, 0, Thickness);
+
+	FVector ControllerDirection_LineEnd = LineStart + (GetControlRotation().Vector() * 100.0f);
+	// Draw 'Controller' Rotation ('PlayerController' that 'possessed' this character)
+	DrawDebugDirectionalArrow(GetWorld(), LineStart, ControllerDirection_LineEnd, DrawScale, FColor::Green, false, 0.0f, 0, Thickness);
+	
 }
 
 // Called to bind functionality to input
@@ -54,8 +74,58 @@ void ARCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	PlayerInputComponent->BindAxis("MoveForward",this,&ARCharacter::MoveForward);
-
+	PlayerInputComponent->BindAxis("MoveRight",this,&ARCharacter::MoveRight);
+	
 	PlayerInputComponent->BindAxis("Turn",this,&APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("LookUp",this,&APawn::AddControllerPitchInput);
+	
+	PlayerInputComponent->BindAction("Jump",IE_Pressed, this, &ARCharacter::Jump);
 
+	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &ARCharacter::PrimaryAttack);
+	PlayerInputComponent->BindAction("PrimaryInteract",IE_Pressed,this, &ARCharacter::PrimaryInteract);
 }
 
+void ARCharacter::MoveForward(float Value)
+{
+	FRotator ControlRot = GetControlRotation();
+	ControlRot.Pitch = 0.0f;
+	ControlRot.Roll = 0.0f;
+	
+	FVector Direction = FRotationMatrix(ControlRot).GetScaledAxis(EAxis::X);
+	AddMovementInput(Direction,Value);
+}
+
+void ARCharacter::MoveRight(float Value)
+{
+	FRotator ControlRot = GetControlRotation();
+	ControlRot.Pitch = 0.0f;
+	ControlRot.Roll = 0.0f;
+
+	// X = Forward (Red)
+	// Y = Right (Green)
+	// Z = Up (Blue)
+
+	// 어느 쪽이 전방인지 알아내어 플레이어가 그 방향으로 이동하려 한다고 기록합니다.
+	const FVector Direction = FRotationMatrix(ControlRot).GetScaledAxis(EAxis::Y);
+	AddMovementInput(Direction,Value);
+}
+
+void ARCharacter::PrimaryAttack()
+{
+	FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
+	
+	FTransform SpawnTM = FTransform(GetControlRotation(),HandLocation);
+	
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+	GetWorld()->SpawnActor<AActor>(ProjectileClass,SpawnTM,SpawnParams);
+}
+
+void ARCharacter::PrimaryInteract()
+{
+	if (InteractionComp)
+	{
+		InteractionComp->PrimaryInteract();
+	}
+}
