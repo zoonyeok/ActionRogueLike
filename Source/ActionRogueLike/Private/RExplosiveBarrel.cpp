@@ -11,7 +11,7 @@ ARExplosiveBarrel::ARExplosiveBarrel()
 
 	SphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
 	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ARExplosiveBarrel::OnOverlapBegin);
-	SphereComp->SetSphereRadius(80.f);
+	SphereComp->SetSphereRadius(1000.f);
 	RootComponent = SphereComp;
 	
 	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp"));

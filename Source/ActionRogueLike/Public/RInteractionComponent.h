@@ -12,7 +12,7 @@ class ACTIONROGUELIKE_API URInteractionComponent : public UActorComponent
 {
 	GENERATED_BODY()
 public:
-
+	
 	void PrimaryInteract();
 	
 
