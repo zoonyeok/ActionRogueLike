@@ -2,6 +2,7 @@
 
 
 #include "RInteractionComponent.h"
+#include "DrawDebugHelpers.h"
 #include "RGamePlayInterface.h"
 #include "EngineUtils.h"
 
@@ -46,20 +47,37 @@ void URInteractionComponent::PrimaryInteract()
 	FRotator EyeRotation;
 	MyOwner->GetActorEyesViewPoint(EyeLocation,EyeRotation);
 
-	FVector End = EyeLocation + (EyeRotation.Vector() * 1000);
+	FVector End = EyeLocation + (EyeRotation.Vector() * 200);
 	
-	FHitResult Hit;
-	GetWorld()->LineTraceSingleByObjectType(Hit,EyeLocation,End,ObjectQueryParams);
+	//FHitResult Hit;
+	///bool bBlockingHit = GetWorld()->LineTraceSingleByObjectType(Hit,EyeLocation,End,ObjectQueryParams);
 
-	AActor* HitActor = Hit.GetActor();
-	if (HitActor)
+	float Radius = 30.f;
+	TArray<FHitResult> Hits;
+	FCollisionShape Sphere;
+	Sphere.SetSphere(30.f);
+	
+	bool bBlockingHit = GetWorld()->SweepMultiByObjectType(Hits,EyeLocation,End,FQuat::Identity,ObjectQueryParams,Sphere);
+	FColor LineColor = bBlockingHit ? FColor::Green : FColor::Red;
+	if (bBlockingHit)
 	{
-		if (HitActor->Implements<URGamePlayInterface>())
+		for(FHitResult Hit : Hits)
 		{
-			APawn* MyPawn = Cast<APawn>(MyOwner);
+			AActor* HitActor = Hit.GetActor();
+			if (HitActor)
+			{
+				if (HitActor->Implements<URGamePlayInterface>())
+				{
+					APawn* MyPawn = Cast<APawn>(MyOwner);
 			
-			IRGamePlayInterface::Execute_Interact(HitActor,MyPawn);
+					IRGamePlayInterface::Execute_Interact(HitActor,MyPawn);
+					break;
+				}
+			}
+			DrawDebugSphere(GetWorld(),Hit.ImpactPoint,Radius,32,LineColor,false,2.0f);
 		}
 	}
+	
+	DrawDebugLine(GetWorld(),EyeLocation,End,LineColor,false,2.0f,0,2.0f);
 }
 

@@ -1,0 +1,187 @@
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\SingleThreadScheduler.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base/SingleThreadSchedulerBase.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/base/IScheduler.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\functional
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\yvals_core.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\sal.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\concurrencysal.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vadefs.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xkeycheck.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\exception
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\yvals.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\crtdbg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_new_debug.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_new.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\crtdefs.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\use_ansi.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\type_traits
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstdint
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\stdint.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xstddef
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstddef
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stddef.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xtr1common
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstdlib
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_malloc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_search.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdlib.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\limits.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\initializer_list
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\malloc.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_exception.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\eh.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_terminate.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\tuple
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xutility
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\climits
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstring
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\string.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_memory.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_memcpy_s.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_string.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstring.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\utility
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\typeinfo
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_typeinfo.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xmemory
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\limits
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cfloat
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\float.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cwchar
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstdio
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdio.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdio.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_stdio_config.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\wchar.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wconio.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wctype.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wdirect.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wio.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_share.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wprocess.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wtime.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\sys/stat.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\sys/types.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\intrin0.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\intrin0.inl.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\isa_availability.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\new
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xatomic.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\memory
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\iosfwd
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\unordered_map
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xhash
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cmath
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\list
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xpolymorphic_allocator.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vector
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xbit_ops.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xstring
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xnode_handle.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\thread
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\chrono
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ctime
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\time.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ratio
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xtimec.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\process.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_startup.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_startup.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xthreads.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\rd_framework_export.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/Lifetime.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\map
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xtree
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\mutex
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\system_error
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\__msvc_system_error_abi.hpp
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cerrno
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\stdexcept
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xcall_once.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xerrc.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\atomic
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\deque
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\algorithm
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\iterator
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ostream
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ios
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xlocnum
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\streambuf
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xiosbase
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\share.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xlocale
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xfacet
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xlocinfo
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\__msvc_xlocinfo_types.hpp
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cctype
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\ctype.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\clocale
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\locale.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\string
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/spdlog.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\string_view
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\intrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\setjmp.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\immintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\wmmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\nmmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\smmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\tmmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\pmmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\emmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xmmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\mmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\zmmintrin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ammintrin.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/registry.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/cfg/log_levels.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/logger.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/backtracer.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg_buffer.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/circular_q.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/version.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL\include\ctpl_stl.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\future
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\condition_variable
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ppltasks.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\pplwin.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\pplinterface.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ppltaskscheduler.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\crtdefs.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\pplcancellation_token.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\queue

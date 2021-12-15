@@ -1,0 +1,49 @@
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalCookie.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstdint
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\yvals_core.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\sal.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\concurrencysal.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vadefs.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xkeycheck.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\stdint.h
+E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\atomic
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\yvals.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\crtdbg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_new_debug.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_new.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\crtdefs.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\use_ansi.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstddef
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stddef.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xtr1common
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstring
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\string.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_memory.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_memcpy_s.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\vcruntime_string.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstring.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xatomic.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\intrin0.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\intrin0.inl.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\type_traits
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xstddef
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\cstdlib
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_malloc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_search.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdlib.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\limits.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\initializer_list
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xthreads.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\climits
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\xtimec.h
+E:\VS2022\VC\Tools\MSVC\14.31.30818\INCLUDE\ctime
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\time.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wtime.h
