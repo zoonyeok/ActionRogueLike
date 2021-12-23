@@ -2,6 +2,8 @@
 
 
 #include "RMagicProjectile.h"
+
+#include "RAttributeComponent.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Particles/ParticleSystemComponent.h"
@@ -16,8 +18,8 @@ ARMagicProjectile::ARMagicProjectile()
 	// SphereComp->SetCollisionObjectType(ECC_WorldDynamic);
 	// SphereComp->SetCollisionResponseToAllChannels(ECR_Ignore);
 	// SphereComp->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
-	
-	SphereComp->OnComponentHit.AddDynamic(this, &ARMagicProjectile::OnHit);	// 알림 설정 for when this component hits something blocking
+	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ARMagicProjectile::OnActorBeginOverlap);
+	//SphereComp->OnComponentHit.AddDynamic(this, &ARMagicProjectile::OnHit);	// 알림 설정 for when this component hits something blocking
 	
 	SphereComp->SetCollisionProfileName("Projectile"); // 프로젝트 세팅에서 설정시 사용
 	
@@ -33,17 +35,34 @@ ARMagicProjectile::ARMagicProjectile()
 
 }
 
-void ARMagicProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
-	FVector NormalImpulse, const FHitResult& Hit)
+void ARMagicProjectile::BeginPlay()
 {
-	// Only add impulse and destroy projectile if we hit a physics
-	if (OtherActor == nullptr || OtherActor == this || OtherComp == nullptr)
-		return;
-	
-	if (OtherComp->IsSimulatingPhysics())
-	{
-		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
+	Super::BeginPlay();
+}
 
-		Destroy();
+// 팀원 체크 
+void ARMagicProjectile::OnActorBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	int32 OtherBodyIndex,bool bFromSweep, const FHitResult& SweepResult)
+{
+	// 자기가 쏜 Projectile과 충돌 방지 : OtherActor != GetInstigator()
+	if (OtherActor && OtherActor != GetInstigator())
+	{
+		URAttributeComponent* AttributeComp = Cast<URAttributeComponent>(OtherActor->GetComponentByClass(URAttributeComponent::StaticClass()));
+		if (AttributeComp)
+		{
+			AttributeComp->ApplyHealthChange(-20.f);
+
+			//UE_LOG(LogTemp, Log, TEXT("HealthChanged to : %f"), AttributeComp->GetHealth());
+
+			Destroy();
+		}
 	}
+
+	// if (OtherComp->IsSimulatingPhysics())
+	// {
+	// 	OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
+	//
+	// 	
+	// }
+	
 }

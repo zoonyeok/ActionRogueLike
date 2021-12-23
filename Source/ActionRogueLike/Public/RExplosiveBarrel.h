@@ -4,9 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "PhysicsEngine/RadialForceComponent.h"
 #include "RExplosiveBarrel.generated.h"
-
-class USphereComponent;
 
 UCLASS()
 class ACTIONROGUELIKE_API ARExplosiveBarrel : public AActor
@@ -20,12 +19,17 @@ public:
 protected:
 
 	UPROPERTY(VisibleAnywhere)
-	USphereComponent* SphereComp;
-
-	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* MeshComp;
 
+	UPROPERTY(VisibleAnywhere)
+	URadialForceComponent* ForceComp;
+
+protected:
+
+	void PostInitializeComponents() override;
+
 	UFUNCTION()
-	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp,
-		int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	void OnActorHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	FVector NormalImpulse, const FHitResult& Hit);
+
 };

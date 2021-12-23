@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RAttributeComponent.h"
 #include "GameFramework/Character.h"
 #include "RCharacter.generated.h"
 
@@ -24,7 +25,6 @@ protected:
 	UAnimMontage* AttackAnim;
 
 	FTimerHandle TimerHandle_PrimaryAttack;
-
 	
 
 public:
@@ -37,10 +37,13 @@ protected:
 	USpringArmComponent* SpringArmComp;
 	
 	UPROPERTY(VisibleAnywhere)
-	UCameraComponent* CameraComp;
+	UCameraComponent* CameraComp; 
 
 	UPROPERTY(VisibleAnywhere)
 	URInteractionComponent* InteractionComp;
+
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="Components")
+	URAttributeComponent* AttributeComp;
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

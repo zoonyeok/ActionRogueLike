@@ -21,9 +21,10 @@ ARCharacter::ARCharacter()
 	SpringArmComp->bUsePawnControlRotation = true;
 	SpringArmComp->SetupAttachment(RootComponent);
 	
-	SpringArmComp->TargetArmLength = 300.f;
+	SpringArmComp->TargetArmLength = 250.f;
 	//SpringArmComp->SetRelativeRotation(FRotator(-15.f,0.f,0.f));
-
+	SpringArmComp->SocketOffset = FVector(0.f,90.f,0.f);
+	
 	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComp"));
 	CameraComp->SetupAttachment(SpringArmComp);
 
@@ -36,6 +37,9 @@ ARCharacter::ARCharacter()
 	// {
 	// 	GetMesh()->SetSkeletalMesh(SK_Character.Object);
 	// }
+
+	AttributeComp = CreateDefaultSubobject<URAttributeComponent>(TEXT("AttributeComp"));
+	
 }
 
 // Called when the game starts or when spawned
@@ -97,6 +101,7 @@ void ARCharacter::MoveForward(float Value)
 
 void ARCharacter::MoveRight(float Value)
 {
+	
 	FRotator ControlRot = GetControlRotation();
 	ControlRot.Pitch = 0.0f;
 	ControlRot.Roll = 0.0f;
@@ -121,15 +126,17 @@ void ARCharacter::PrimaryAttack()
 
 void ARCharacter::PrimaryAttack_TimeElaped()
 {
-	FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
-	
-	FTransform SpawnTM = FTransform(GetControlRotation(),HandLocation);
-	
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	SpawnParams.Instigator = this;
-
-	GetWorld()->SpawnActor<AActor>(ProjectileClass,SpawnTM,SpawnParams);
+	if (ensure(ProjectileClass)) // nullptr이면 exception 발생 ,컴파일시 한 번만 알림 , shipping빌드에서는 사용 안됨 
+	{
+		FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
+		FTransform SpawnTM = FTransform(GetControlRotation(),HandLocation);
+		
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		SpawnParams.Instigator = this;
+		
+		GetWorld()->SpawnActor<AActor>(ProjectileClass,SpawnTM,SpawnParams);
+	}
 }
 
 void ARCharacter::PrimaryInteract()

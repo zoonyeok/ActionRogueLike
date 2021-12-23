@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-RiderBlueprintExtension-0017.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\GitHub\ActionRogueLike\Intermediate\Build\Win64\ActionRogueLikeEditor\Development\UnrealEd\SharedPCH.UnrealEd.RTTI.ShadowErrors.h.obj"
+"E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Module.RiderBlueprintExtension.cpp.obj"
+"E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Default.rc2.res"
+/OUT:"E:\GitHub\ActionRogueLike\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\UE4Editor-RiderBlueprintExtension-0017.lib"
+/INCLUDE:IMPLEMENT_MODULE_RiderBlueprintExtension

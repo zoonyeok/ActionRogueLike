@@ -21,6 +21,10 @@ public:
 
 protected:
 
+	UFUNCTION()
+	void OnActorBeginOverlap (UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+
 	// collision
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	USphereComponent* SphereComp; 
@@ -31,10 +35,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UParticleSystemComponent* EffectComp;
 
+	virtual void BeginPlay() override;
+
 public:
-	
-	UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 	
 	/** Returns CollisionComp subobject **/
 	USphereComponent* GetCollisionComp() const { return SphereComp; }

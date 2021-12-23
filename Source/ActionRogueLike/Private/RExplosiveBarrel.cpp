@@ -1,42 +1,45 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "RExplosiveBarrel.h"
-#include "Components/SphereComponent.h"
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 ARExplosiveBarrel::ARExplosiveBarrel()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	SphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
-	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ARExplosiveBarrel::OnOverlapBegin);
-	SphereComp->SetSphereRadius(1000.f);
-	RootComponent = SphereComp;
 	
 	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp"));
-	MeshComp->SetupAttachment(SphereComp);
+	RootComponent = MeshComp;
+	MeshComp->SetSimulatePhysics(true);
+	
+	ForceComp = CreateDefaultSubobject<URadialForceComponent>(TEXT("ForceComp"));
+	ForceComp->SetupAttachment(MeshComp);
+	ForceComp->SetAutoActivate(false);
+
+	ForceComp->Radius = 750.f;
+	ForceComp->ImpulseStrength = 2500.f;
+	ForceComp->bImpulseVelChange = true;
+	ForceComp->AddCollisionChannelToAffect(ECC_WorldDynamic);
 }
 
-void ARExplosiveBarrel::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void ARExplosiveBarrel::PostInitializeComponents()
 {
-	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
-	
-	if (OtherActor == nullptr || OtherActor == this || OtherComp == nullptr)
-		return;
+	Super::PostInitializeComponents();
 
-	const FVector Start = GetActorLocation();
-	const FVector End = GetActorLocation();
-	TArray<FHitResult> Hits;
-	const FCollisionShape Sphere = FCollisionShape::MakeSphere(SphereComp->GetScaledSphereRadius());
+	MeshComp->OnComponentHit.AddDynamic(this, &ARExplosiveBarrel::OnActorHit);
+}
+
+void ARExplosiveBarrel::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor,
+                                   UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
+{
+	ForceComp->FireImpulse();
+
+	UE_LOG(LogTemp, Log, TEXT("OnActor in Explosive Barrel"));
+
+	UE_LOG(LogTemp, Warning, TEXT("OtherActor: %s, at game time: %f"), *GetNameSafe(OtherActor), GetWorld()->TimeSeconds);
+
+	FString CombinedString = FString::Printf(TEXT("Hit at Location: %s"), *Hit.ImpactPoint.ToString());
+	DrawDebugString(GetWorld(),Hit.ImpactPoint, CombinedString, nullptr,FColor::Green,2.0f,true);
 	
-	bool bHit = GetWorld()->SweepMultiByChannel(Hits,Start,End,FQuat::Identity,ECC_WorldDynamic,Sphere);
-	if (bHit)
-	{
-		for(const FHitResult& Hit : Hits)
-		{
-			Hit.Component->AddRadialForce(GetActorLocation(),100000.f,1000000.f, ERadialImpulseFalloff::RIF_Constant,true);
-		}
-	}
 }
